@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card">
+    <div class="card-header">
+      <ul class="nav nav-tabs card-header-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="true" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
+    </div>
+    {% for app in apps %}
+        <div class="card">
+            <h5 class="card-header">#{{ app.pk }}</h5>
+            <div class="card-body">
+            <h5 class="card-title">{{ app.title }}</h5>
+            <p class="card-text">Автор: {{ app.author }}</p>
+            <p class="cast_text">Статус: {{ app.status }}</p>
+            <p class="cast_text">Дата создания: {{ app.pub_date }}</p>
+            <a href="#" class="btn btn-primary">Подробнее</a>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
