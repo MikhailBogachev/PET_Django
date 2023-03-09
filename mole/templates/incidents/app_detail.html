@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}
+  Заявкa #{{ app.pk }} - {{ app.title }}
+{% endblock %}
+{% block content %}
+<div class="col-md-10 offset-md-1">
+    <h2 class="card-header">Заявкa #{{ app.pk }} - {{ app.title }}</h2>
+<div class="row">
+    <aside class="col-12 col-md-4">
+        <ul class="list-group list-group-flush"></ul>
+            <li class="card-text">Автор: {{ app.author }}</li>
+            <li class="cast_text">Статус: {{ app.status }}</li>
+            <li class="cast_text">Дата создания: {{ app.pub_date }}</li>
+        </ul>
+    </aside>
+    <article class="col-12 col-md-8">
+        {{ app.text }}
+    </article>
+</div></div>
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock %}

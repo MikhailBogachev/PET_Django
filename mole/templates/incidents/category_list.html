@@ -18,7 +18,7 @@
   {% for app in apps %}
     <div class="row">
       <div class="col-md-10 offset-md-1">
-          <h5 class="card-header">Заявка #{{ app.pk }}</h5>
+          <h5 class="card-header">Заявка #{{ app.pk }} - {{ app.title }}</h5>
           <div class="card-body">
             <h5 class="card-title">{{ app.title }}</h5>
             <p class="card-text">Автор: {{ app.author }}</p>
